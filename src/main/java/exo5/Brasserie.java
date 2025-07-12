@@ -28,7 +28,8 @@ public class Brasserie {
             c ->
                 (c.getNom().toLowerCase().contains(mot.toLowerCase())
                     || (c.getPrenom().toLowerCase().contains(mot.toLowerCase()))
-                    || (c.getEmail().toLowerCase().contains(mot.toLowerCase()))))
+                    || c.getEmail() != null
+                        && c.getEmail().toLowerCase().contains(mot.toLowerCase())))
         .collect(Collectors.toList());
   }
 
