@@ -1,9 +1,19 @@
 package exo6;
 
+import java.awt.*;
 import lombok.Getter;
 
 @Getter
 public class RobotNG extends Robot {
+
+  public RobotNG(Point point, Direction direction) {
+    super(point, direction);
+  }
+
+  public RobotNG() {
+    super();
+  }
+
   public void turnLeft() {
     for (int i = 0; i < 3; i++) {
       turnRight();
