@@ -9,10 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Robot {
-  private Point point;
-  private Direction direction;
+  protected Point point;
+  protected Direction direction;
 
-  public void moveFoward() {
+  public void moveForward() {
     switch (direction) {
       case NORTH -> point.x++;
       case SOUTH -> point.x--;
@@ -21,7 +21,7 @@ public class Robot {
     }
   }
 
-  public void changeDirection() {
+  public void turnRight() {
     switch (direction) {
       case NORTH -> direction = Direction.EAST;
       case EAST -> direction = Direction.SOUTH;
