@@ -22,19 +22,19 @@ public class RobotNG extends Robot {
 
   public void moveForward(int step) {
     switch (direction) {
-      case NORTH -> point.x += step;
-      case SOUTH -> point.x -= step;
-      case EAST -> point.y += step;
-      case WEST -> point.y -= step;
+      case NORTH -> point.y += step;
+      case SOUTH -> point.y -= step;
+      case EAST -> point.x += step;
+      case WEST -> point.x -= step;
     }
   }
 
   public void moveBackwardsFaster(int step) {
     switch (direction) {
-      case NORTH -> point.x -= step;
-      case SOUTH -> point.x += step;
-      case EAST -> point.y -= step;
-      case WEST -> point.y += step;
+      case NORTH -> point.y -= step;
+      case SOUTH -> point.y += step;
+      case EAST -> point.x -= step;
+      case WEST -> point.x += step;
     }
   }
 }

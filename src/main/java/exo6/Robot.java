@@ -14,10 +14,10 @@ public class Robot {
 
   public void moveForward() {
     switch (direction) {
-      case NORTH -> point.x++;
-      case SOUTH -> point.x--;
-      case EAST -> point.y++;
-      case WEST -> point.y--;
+      case NORTH -> point.y++;
+      case SOUTH -> point.y--;
+      case EAST -> point.x++;
+      case WEST -> point.x--;
     }
   }
 
