@@ -14,4 +14,11 @@ public class Commande {
   private LocalDateTime date;
   private Client client;
   private List<BoissonCommande> listeBoissonCommande;
+
+  public double totalQuantite(){
+    double total = 0;
+    for(BoissonCommande bc : listeBoissonCommande){
+      total += bc.getQuantiteAchete() * bc.getBoisson().
+    }
+  }
 }

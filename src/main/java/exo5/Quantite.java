@@ -8,6 +8,6 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 public class Quantite {
-  private int valeur;
+  private double valeur;
   private Unite unite;
 }
