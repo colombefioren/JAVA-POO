@@ -22,4 +22,8 @@ public class Product {
   public double calculateStockValue() {
     return this.price * this.quantity;
   }
+
+  public double calculatePriceTTC() {
+    return this.price;
+  }
 }

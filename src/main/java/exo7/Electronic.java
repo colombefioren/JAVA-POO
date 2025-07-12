@@ -4,8 +4,8 @@ import lombok.Getter;
 
 @Getter
 public class Electronic extends Product {
-  private String brand;
-  private int warranty;
+  private final String brand;
+  private final int warranty;
 
   public Electronic() {
     this("default", 0, 0, "default", 0);
@@ -30,5 +30,10 @@ public class Electronic extends Product {
         + ", warranty : "
         + warranty
         + "}}";
+  }
+
+  @Override
+  public double calculatePriceTTC() {
+    return this.price * (1 + 0.15 + (this.warranty > 12 ? 0.05 : 0));
   }
 }
