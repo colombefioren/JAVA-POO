@@ -1,16 +1,20 @@
 package exo7;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public class Electronic extends Product {
   private String brand;
   private int warranty;
 
-  Electronic() {
-    this("default", 0);
+  public Electronic() {
+    this("default", 0, 0, "default", 0);
+  }
+
+  public Electronic(String name, double price, int quantity, String brand, int warranty) {
+    super(name, price, quantity);
+    this.brand = brand;
+    this.warranty = warranty;
   }
 
   @Override

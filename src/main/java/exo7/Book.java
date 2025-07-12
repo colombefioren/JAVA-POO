@@ -1,16 +1,20 @@
 package exo7;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public class Book extends Product {
   private String author;
   private int nbrPages;
 
-  Book() {
-    this("Unknown", 0);
+  public Book() {
+    this("default", 0, 0, "Unknown", 0);
+  }
+
+  public Book(String name, double price, int quantity, String author, int nbrPages) {
+    super(name, price, quantity);
+    this.author = author;
+    this.nbrPages = nbrPages;
   }
 
   @Override

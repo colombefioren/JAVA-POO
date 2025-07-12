@@ -1,17 +1,22 @@
 package exo7;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
-@AllArgsConstructor
 public class Cloth extends Product {
   private Size size;
   private String color;
   private Fabric fabric;
 
-  Cloth() {
-    this(Size.XS, "default", Fabric.OTHER);
+  public Cloth() {
+    this("default", 0, 0, Size.XS, "default", Fabric.OTHER);
+  }
+
+  public Cloth(String name, double price, int quantity, Size size, String color, Fabric fabric) {
+    super(name, price, quantity);
+    this.size = size;
+    this.color = color;
+    this.fabric = fabric;
   }
 
   @Override

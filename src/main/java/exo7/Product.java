@@ -10,7 +10,7 @@ public class Product {
   protected double price;
   protected int quantity;
 
-  Product() {
+  public Product() {
     this("default", 0, 0);
   }
 
