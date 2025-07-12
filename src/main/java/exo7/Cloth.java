@@ -8,10 +8,10 @@ import lombok.Getter;
 public class Cloth extends Product {
   private Size size;
   private String color;
-  private String fabric;
+  private Fabric fabric;
 
   Cloth() {
-    this(Size.XS, "default", "default");
+    this(Size.XS, "default", Fabric.OTHER);
   }
 
   @Override
