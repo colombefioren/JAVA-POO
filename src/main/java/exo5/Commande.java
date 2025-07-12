@@ -15,10 +15,19 @@ public class Commande {
   private Client client;
   private List<BoissonCommande> listeBoissonCommande;
 
-  public double totalQuantite(){
+  public double totalQuantite() {
     double total = 0;
-    for(BoissonCommande bc : listeBoissonCommande){
-      total += bc.getQuantiteAchete() * bc.getBoisson().
+    for (BoissonCommande bc : listeBoissonCommande) {
+      total += bc.getQuantiteAchete() * bc.getBoisson().conversionQuantite(Unite.L);
     }
+    return total;
+  }
+
+  public double totalQuantite(Unite wantedUnite) {
+    double total = 0;
+    for (BoissonCommande bc : listeBoissonCommande) {
+      total += bc.getQuantiteAchete() * bc.getBoisson().conversionQuantite(wantedUnite);
+    }
+    return total;
   }
 }

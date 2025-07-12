@@ -13,16 +13,17 @@ public class Boisson {
   private Quantite quantite;
   private double prixUnitaire;
 
-  public double conversion(Unite targetUnit) {
+  public double conversionQuantite(Unite targetUnit) {
     double valeur = quantite.getValeur();
     Unite currentUnit = quantite.getUnite();
 
-    double valeurEnLitres = switch (currentUnit) {
-      case L -> valeur;
-      case DL -> valeur / 10;
-      case CL -> valeur / 100;
-      case ML -> valeur / 1000;
-    };
+    double valeurEnLitres =
+        switch (currentUnit) {
+          case L -> valeur;
+          case DL -> valeur / 10;
+          case CL -> valeur / 100;
+          case ML -> valeur / 1000;
+        };
 
     return switch (targetUnit) {
       case L -> valeurEnLitres;
@@ -31,5 +32,4 @@ public class Boisson {
       case ML -> valeurEnLitres * 1000;
     };
   }
-
 }
