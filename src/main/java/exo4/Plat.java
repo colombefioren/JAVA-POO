@@ -1,5 +1,6 @@
 package exo4;
 
+import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,4 +13,9 @@ public class Plat {
   private String nom;
   private double prixUnitaire;
   private Type type;
+  private List<Ingredient> listeIngredient;
+
+  public boolean contientIngredient(Ingredient ingredient) {
+    return this.listeIngredient.contains(ingredient);
+  }
 }
