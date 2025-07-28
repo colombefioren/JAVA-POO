@@ -32,7 +32,6 @@ public class ExpenseDAO {
         .sum();
   }
 
-
   public List<String> getExpensiveExpenseLabel() {
     return expenseList.stream()
         .filter(Expense::isLargeExpense)
