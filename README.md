@@ -1,4 +1,4 @@
-# 🔒 Java Encapsulation Exercises
+# 🔒 JAVA Exercises
 
 This repository contains a collection of Java exercises.
 
@@ -9,8 +9,7 @@ This repository contains a collection of Java exercises.
 - Food Orders  
 - Beverage Sales  
 - Robots & Inheritance  
-- Advanced E-commerce (with taxes)
-
-Ideal for learning clean, secure, and modular Java OOP.
-
+- E-commerce
+- ExpenseDAO
+  
 ---
